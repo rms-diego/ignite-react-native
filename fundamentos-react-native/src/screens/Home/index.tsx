@@ -9,10 +9,15 @@ import {
 import { styles } from "./styles";
 
 import { Participant } from "../../components/Participant";
+import { useState } from "react";
 
 export function Home() {
   const handleParticipantAdd = () => {
     console.log("clique");
+  };
+
+  const participantRemove = (content: string) => {
+    console.log(`Remover esse participante: ${content}`);
   };
 
   return (
@@ -28,17 +33,18 @@ export function Home() {
             placeholderTextColor={"#6B6B6B"}
           />
 
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.textButton} onPress={handleParticipantAdd}>
-              +
-            </Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={handleParticipantAdd}
+          >
+            <Text style={styles.textButton}>+</Text>
           </TouchableOpacity>
         </View>
 
-        <Participant participantName="Diego Ramos" />
-        <Participant participantName="Tatiana Ramos" />
-        <Participant participantName="Lucas Ramos" />
-        <Participant participantName="Solange Ramos" />
+        <Participant
+          participantName="Diego Ramos"
+          participantRemove={participantRemove}
+        />
       </ScrollView>
     </View>
   );
