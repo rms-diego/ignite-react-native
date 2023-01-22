@@ -19,7 +19,15 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
 
+  formContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+    marginVertical: 36,
+  },
+
   input: {
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     height: 56,
@@ -28,6 +36,7 @@ export const styles = StyleSheet.create({
     color: "#FFF",
     padding: 16,
     fontSize: 20,
+    marginRight: 25,
   },
 
   button: {
