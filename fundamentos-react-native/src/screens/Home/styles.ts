@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    marginVertical: 36,
+    marginVertical: 20,
   },
 
   input: {
