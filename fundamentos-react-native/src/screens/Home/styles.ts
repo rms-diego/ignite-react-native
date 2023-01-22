@@ -29,4 +29,19 @@ export const styles = StyleSheet.create({
     padding: 16,
     fontSize: 20,
   },
+
+  button: {
+    height: 56,
+    width: 56,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#31CF67",
+    borderRadius: 5,
+    marginVertical: 30,
+  },
+
+  textButton: {
+    color: "white",
+    fontSize: 24,
+  },
 });
