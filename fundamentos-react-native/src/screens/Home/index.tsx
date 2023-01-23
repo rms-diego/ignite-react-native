@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   View,
   ScrollView,
+  FlatList,
 } from "react-native";
 
 import { styles } from "./styles";
@@ -47,7 +48,20 @@ export function Home() {
         </TouchableOpacity>
       </View>
 
-      <ScrollView showsHorizontalScrollIndicator={false}>
+      {/* <FlatList
+        data={participants}
+        keyExtractor={(name) => name}
+        showsHorizontalScrollIndicator={false}
+        renderItem={({ item }) => (
+          <Participant
+            key={`${item} `}
+            participantName={item}
+            participantRemove={participantRemove}
+          />
+        )}
+      /> */}
+
+      <ScrollView>
         {participants.map((participant, index) => (
           <Participant
             key={`${participant} ${index}`}
