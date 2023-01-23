@@ -53,8 +53,6 @@ export function Home() {
     setParticipantName(content.trim());
   };
 
-  // console.log(participants);
-
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Nome do evento</Text>
