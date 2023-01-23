@@ -53,4 +53,10 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 24,
   },
+
+  textWithoutParticipants: {
+    color: "white",
+    fontSize: 16,
+    textAlign: "center",
+  },
 });

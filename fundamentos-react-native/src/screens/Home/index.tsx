@@ -73,14 +73,22 @@ export function Home() {
       </View>
 
       <ScrollView>
-        {participants.length > 0 &&
+        {participants.length > 0 ? (
           participants.map((participant, index) => (
             <Participant
               key={`${participant} ${index}`}
               participantName={participant}
               participantRemove={participantRemove}
             />
-          ))}
+          ))
+        ) : (
+          <View>
+            <Text style={styles.textWithoutParticipants}>
+              Ninguém chegou no evento ainda? Adicione participantes a lista de
+              presença
+            </Text>
+          </View>
+        )}
       </ScrollView>
     </View>
   );
