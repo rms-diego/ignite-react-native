@@ -8,6 +8,8 @@ import {
 
 import { Groups } from "@screens/Groups";
 
+import { Loading } from "@components/Loading";
+
 import theme from "./src/styles";
 
 export default function App() {
@@ -15,7 +17,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Groups /> : <ActivityIndicator />}
+      {fontsLoaded ? <Groups /> : <Loading />}
       <StatusBar translucent backgroundColor={theme.COLORS.GRAY_600} />
     </ThemeProvider>
   );
