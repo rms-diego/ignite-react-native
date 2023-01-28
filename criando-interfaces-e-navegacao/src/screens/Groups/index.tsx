@@ -7,6 +7,7 @@ import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import { GroupsCard } from "@components/GroupCard";
 import { ListEmpty } from "@components/ListEmpty";
+import { Button } from "@components/Button";
 
 export function Groups() {
   const [groups, setGroups] = useState<string[]>([]);
@@ -25,6 +26,8 @@ export function Groups() {
         ListEmptyComponent={<ListEmpty message="Sem turmas" />}
         contentContainerStyle={isEmptyGroups && { flex: 1 }}
       />
+
+      <Button title="Criar turma" />
     </Container>
   );
 }
