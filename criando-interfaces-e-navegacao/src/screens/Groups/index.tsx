@@ -4,19 +4,14 @@ import { FlatList } from "react-native";
 import { Container } from "./styles";
 
 import { Header } from "@components/Header";
-import { Highlight } from "@components/highligth";
+import { Highlight } from "@components/Highlight";
 import { GroupsCard } from "@components/GroupCard";
+import { ListEmpty } from "@components/ListEmpty";
 
 export function Groups() {
-  const [groups, setGroups] = useState<string[]>([
-    "Turma 1",
-    "Turma 2",
-    "Turma 3",
-    "Turma 4",
-    "Turma 5",
-    "Turma 6",
-    "Turma 7",
-  ]);
+  const [groups, setGroups] = useState<string[]>([]);
+
+  const isEmptyGroups = !groups.length;
 
   return (
     <Container>
@@ -27,6 +22,8 @@ export function Groups() {
       <FlatList
         data={groups}
         renderItem={({ item }) => <GroupsCard title={item} />}
+        ListEmptyComponent={<ListEmpty message="Sem turmas" />}
+        contentContainerStyle={isEmptyGroups && { flex: 1 }}
       />
     </Container>
   );
