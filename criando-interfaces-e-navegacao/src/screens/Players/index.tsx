@@ -4,6 +4,7 @@ import { ButtonIcon } from "@components/ButtonIcon";
 import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import { Input } from "@components/Input";
+import { Filter } from "@components/Filter";
 
 export function Players() {
   return (
@@ -19,6 +20,8 @@ export function Players() {
 
         <ButtonIcon icon="add" type="primary" />
       </Form>
+
+      <Filter title="Time A" />
     </Container>
   );
 }
