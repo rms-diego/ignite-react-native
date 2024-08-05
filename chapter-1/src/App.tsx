@@ -1,18 +1,27 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 export default function App() {
   return (
     <>
       <StatusBar style="auto" />
       <View style={styles.container}>
-        <View style={styles.contentContainer}>
-          <Text>Aoba</Text>
-        </View>
+        <Text style={styles.text}>Welcome, Diego</Text>
 
-        <View style={styles.contentContainer}>
-          <Text>Aoba</Text>
-        </View>
+        <TextInput
+          style={styles.input}
+          placeholder="New Skill"
+          placeholderTextColor="#666"
+        />
+
+        <TouchableOpacity
+          style={styles.button}
+          activeOpacity={0.8}
+        >
+          <Text style={styles.text}>Add</Text>
+        </TouchableOpacity>
+
+        <Text style={[styles.text, { marginTop: 15 }]}>My skills</Text>
       </View>
     </>
   );
@@ -21,17 +30,31 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "red",
+    backgroundColor: "#121015",
+    paddingVertical: 70,
+    paddingHorizontal: 50,
+    gap: 10,
   },
-  contentContainer: {
-    flex: 1,
-    justifyContent: "center",
+  text: {
+    color: "white",
+    fontSize: 24,
+    fontWeight: "bold",
   },
 
-  yellowColor: {
-    backgroundColor: "yellow",
+  input: {
+    backgroundColor: "#1f1e25",
+    color: "white",
+    fontSize: 18,
+    padding: 13,
+    borderRadius: 10,
+  },
+  button: {
+    marginTop: 15,
+    backgroundColor: "#666",
+    color: "white",
+    fontSize: 18,
+    padding: 15,
+    borderRadius: 10,
+    alignItems: "center",
   },
 });
